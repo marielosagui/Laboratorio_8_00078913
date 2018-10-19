@@ -110,15 +110,44 @@ const mostrar=()=>{
 /*se mostrara la tabla con la fila una vez dado submit*/ 
 
 /*VALIDACIONES*/
-var first-field = document.getElementById("first-field");
+var fecha=document.getElementById("fecha");
+var desc= document.getElementById("desc");
+var cant=document.getElementById("cant");
+var valor =fecha.value;
+var valor2=desc.value;
+var valor3=cant.value;
 
-first-field.oninput = () => {
-   var valor = first-field.value;
-   if(valor == "" || valor == null){
-     first-field.style.borderColor = "red";
-
-   }else{
-     first-field.style.borderColor = "green";
-
-   }
-} 
+function vali(){
+    if(valor=="" || valor==null){
+        alert('EL CAMPO DEBE LLENARSE');
+        return false;
+    }else if(valor2=="" || valor2 ==null){
+        alert('EL CAMPO DEBE LLENARSE');
+        return false;
+    }else if (valor3=="" || valor3==null){
+        alert('EL CAMPO DEBE LLENARSE');
+        return false;
+    }
+    return true;
+}
+ fecha.oninput =()=>{
+     if(valor=="" || valor==null){
+         fecha.style.borderColor="red";
+     }else{
+         fecha.style.borderColor="green";
+     }
+ }
+desc.oninput =()=>{
+    if(valor2=="" || valor2==null){
+        desc.style.borderColor="red";
+    }else{
+        desc.style.borderColor="green";
+    }
+}
+cant.oninput =()=>{
+    if(valor3=="" || valor3==null){
+        cant.style.borderColor="red";
+    }else{
+        cant.style.borderColor="green";
+    }
+}
